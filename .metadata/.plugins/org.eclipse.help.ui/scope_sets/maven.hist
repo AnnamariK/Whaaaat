@@ -1,0 +1,4 @@
+#Wed Oct 05 17:01:34 BST 2016
+__DEFAULT__=false
+org.eclipse.help.ui.localSearch.master=true
+expression=maven

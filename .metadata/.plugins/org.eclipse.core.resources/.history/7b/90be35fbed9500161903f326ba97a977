@@ -1,0 +1,48 @@
+package testPackage;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class CouncilTaxPayment {
+	
+	WebDriver browser;
+	String URL = "https://ip.e-paycapita.com/AIP/accountSearch.do?link=showAccountSearchPage&requestId=paptintunq72qbu7fz34lotapgd30ms";
+	ReferenceDetailsPage reference;
+	AccountDetailsPage account;
+	ItemsForPaymentPage items;
+	PaymentPage payment;
+	AdditionalInformationPage info;
+	PaymentConfirmationPage confirm;
+	
+	
+	@Before
+	public void openBrowser(){
+		browser = new FirefoxDriver();		
+	}
+	
+	@Given("^Council Tax payment page open$")
+	public void council_Tax_payment_page_open() throws Throwable {
+		browser.get(URL);
+	}
+
+	@When("^I enter my account ref number  \"([^\"]*)\"$")
+	public void i_enter_my_account_Refnumber(String refnumber) throws Throwable {
+		reference = new ReferenceDetailsPage (browser);
+		reference.typeRefNumber (refnumber);
+		reference.clickContinue ();
+	}
+	   
+
+	@Then("^I will be redirected to summary page$")
+	public void i_will_be_redirected_to_summary_page() throws Throwable {
+		
+	}
+	
+}
+	    
+

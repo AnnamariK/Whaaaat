@@ -1,0 +1,13 @@
+package pagePackage;
+
+import org.openqa.selenium.WebDriver;
+
+public class AdditionalInformationPage {
+
+	public AdditionalInformationPage(WebDriver browser) {
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+}

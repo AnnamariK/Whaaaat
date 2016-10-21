@@ -1,0 +1,44 @@
+package pagePackage;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class AdditionalInformationPage {
+	
+	WebDriver browser;
+	String titleDetails = "Cheshire East Council - make an online payment - Data Entry";
+
+	@FindBy (id = "scp_additionalInformationPage_cardholderName_input") private WebElement cardHolderNameField;
+	@FindBy (id = "scp_additionalInformationPage_email_input") private WebElement emailField;
+	@FindBy (id = "scp_additionalInformationPage_emailConfirmation_input") private WebElement emailConfirmField;
+	@FindBy (id = "continue") private WebElement continueButton;
+
+	public AdditionalInformationPage(WebDriver browser) {
+		Assert.assertEquals(titleDetails, browser.getTitle());
+		this.browser = browser;
+		PageFactory.initElements(browser, this);
+		}
+	
+		public void typeCarHolderName(String cardHolderName) {
+			cardHolderNameField.sendKeys(cardHolderName);
+		}
+		
+		public void typeEmail(String email) {
+			emailField.sendKeys(email);
+		}
+		
+		public void typeEmailConfirm(String emailConfirm) {
+			emailConfirmField.sendKeys(emailConfirm);
+		}
+		
+		
+		public PaymentConfirmationPage clickContinueButton() {
+			continueButton.click();
+			return new PaymentConfirmationPage(browser);
+		}
+	
+	
+}

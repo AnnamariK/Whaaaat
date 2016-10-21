@@ -1,0 +1,7 @@
+Feature: Council tax
+	
+	Scenario: Paying Gabi's council tax
+		Given Council Tax payment page open
+		When I enter my account reference number "67055382"
+		And  Click on continue button
+		Then I will be redirected to summary page

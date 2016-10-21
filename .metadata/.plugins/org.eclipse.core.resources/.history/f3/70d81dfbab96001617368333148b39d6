@@ -1,0 +1,13 @@
+package testPackage;
+
+import org.openqa.selenium.WebDriver;
+
+public class ItemsForPaymentPage {
+	
+	
+
+	public ItemsForPaymentPage(WebDriver browser) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

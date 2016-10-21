@@ -1,0 +1,40 @@
+package testPackage;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class CouncilTaxPayment {
+	
+	
+	
+	
+	
+			
+	}
+	
+	@Given("^Council Tax payment page open$")
+	public void council_Tax_payment_page_open() throws Throwable {
+		
+	}
+
+	@When("^I enter my account ref number  \"([^\"]*)\"$")
+	public void i_enter_my_account_Refnumber(String refnumber) throws Throwable {
+		
+	}
+	   
+
+	@Then("^I will be redirected to summary page$")
+	public void i_will_be_redirected_to_summary_page() throws Throwable {
+		
+	}
+	
+	
+}
+	    
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="GitImportWizard">
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="C:\Users\Annamaria\Dropbox\Screenshots\FirstProject\.git">
+			<item value="false"/>
+			<item value="Annamaria &lt;annamaria.keskeny@junifersystems.com&gt;"/>
+			<item value="Latest changes"/>
+			<item value="Annamaria &lt;annamaria.keskeny@junifersystems.com&gt;"/>
+			<item value="0000000000000000000000000000000000000000"/>
+		</list>
+		<list key="D:\Jnrhenergy\Eclipse\.git">
+			<item value="false"/>
+			<item value="Annamaria &lt;annamaria.keskeny@junifersystems.com&gt;"/>
+			<item value="Latest changes"/>
+			<item value="Annamaria &lt;annamaria.keskeny@junifersystems.com&gt;"/>
+			<item value="0000000000000000000000000000000000000000"/>
+		</list>
+		<list key="C:\Users\Annamaria\workspace\.git">
+			<item value="empty"/>
+		</list>
+	</section>
+	<section name="GitCreatePatchWizard">
+		<item value="filesystem" key="GitCreatePatchWizard.LocationPage.location"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.dialogs.MergeTargetSelectionDialog.dialogBounds">
+		<item value="538" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="679" key="DIALOG_HEIGHT"/>
+		<item value="699" key="DIALOG_X_ORIGIN"/>
+		<item value="136" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item value="765,235" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="false" key="sortItemState"/>
+		<item value="500,500" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+	</section>
+	<section name="CommitSelectionDialogSection">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="668" key="DIALOG_X_ORIGIN"/>
+			<item value="255" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+</section>
