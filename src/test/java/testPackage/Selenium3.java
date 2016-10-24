@@ -2,18 +2,19 @@ package testPackage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Selenium3 {
 	
 	WebDriver browser;
-	String URL="http://junifer.com";
+	String URL="https://www.junifersystems.com/";
 	
 	JuniferMainPage junifer;
-	JUniferSVNPage SVN;
+	JUniferVPNPage VPN;
 
 		@Before
 		public void openBrowser(){
@@ -29,12 +30,17 @@ public class Selenium3 {
 
 		@When("^Click on Secure VPN link$")
 		public void click_on_Secure_VPN_link() throws Throwable {
+			junifer = new JuniferMainPage(browser);
+			VPN = junifer.clickVPN();
 		    
 		}
-
-		@Then("^Will be redirected to Secure VPN page$")
-		public void will_be_redirected_to_Secure_VPN_page() throws Throwable {
-		   
+		
+		@After
+		public void closeBrowser() {
+			browser.quit();
 		}
+		
+
+		
 
 }
