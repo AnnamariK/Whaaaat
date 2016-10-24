@@ -11,6 +11,9 @@ public class Selenium3 {
 	
 	WebDriver browser;
 	String URL="http://junifer.com";
+	
+	JuniferMainPage junifer;
+	JUniferSVNPage SVN;
 
 		@Before
 		public void openBrowser(){
