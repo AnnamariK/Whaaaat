@@ -2,7 +2,6 @@ package testPackage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -12,16 +11,15 @@ public class Selenium3 {
 	
 	WebDriver browser;
 	String URL="http://junifer.com";
-	
+
 		@Before
-		private void pub() {
-			System.setProperty("webdriver.gecko.driver","C:\\Users\\Annamaria\\Downloads\\geckodriver-v0.11.1-win64\\geckodriver.exe");	
-			browser = new FirefoxDriver();				
+		public void openBrowser(){
+			System.setProperty("webdriver.gecko.driver","C:\\Users\\Annamaria\\Downloads\\geckodriver-v0.11.1-win64\\geckodriver.exe");
+			browser = new FirefoxDriver();
 		}
-	
 
 		@Given("^Junifer page open$")
-		public void junifer_page_open() throws Throwable {
+		public void junifer_page_open() throws Throwable {	
 			browser.get(URL);
 		 
 		}
