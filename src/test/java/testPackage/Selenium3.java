@@ -34,11 +34,11 @@ public class Selenium3 {
 			VPN = junifer.clickVPN();
 		    
 		}
-		
-		@After
-		public void closeBrowser() {
-			browser.quit();
-		}
+//		
+//		@After
+//		public void closeBrowser() {
+//			browser.quit();
+//		}
 		
 
 		
