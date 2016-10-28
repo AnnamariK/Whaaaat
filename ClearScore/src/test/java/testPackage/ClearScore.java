@@ -6,6 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
+import pagePackage.AddressPage;
 import pagePackage.ClearScorePage;
 import pagePackage.RegisterPage;
 import pagePackage.SignUpPage;
@@ -18,6 +19,7 @@ public class ClearScore {
 	ClearScorePage clearscore;
 	SignUpPage signup;
 	RegisterPage register;
+	AddressPage addressPage;
 	
 	
 	@Before
@@ -46,26 +48,23 @@ public class ClearScore {
 	
 	}
 
-//	@When("^Customer enters the full name \"([^\"]*)\"$")
-//	public void customer_enters_the_full_name(String arg1) throws Throwable {
-//	    
-//	}
-//
-//	@When("^Enters the date of birth \"([^\"]*)\"$")
-//	public void enters_the_date_of_birth(String arg1) throws Throwable {
-//	  
-//	}
-//
-//	@When("^Enters the password \"([^\"]*)\"$")
-//	public void enters_the_password(String arg1) throws Throwable {
-//	   
-//	}
-//
-//	@When("^Ticks the Yes, I agree radio button and click on Create new account button$")
-//	public void ticks_the_Yes_I_agree_radio_button_and_click_on_Create_new_account_button() throws Throwable {
-//	    
-//	}
-//
+	@When("^enters full name \"([^\"]*)\", and enters DOB \"([^\"]*)\", and enters pasword \"([^\"]*)\", and ticks Yes, I agree checkbox, and clicks Create new account button$")
+	public void enters_full_name_and_enters_DOB_and_enters_pasword_and_ticks_Yes_I_agree_checkbox_and_clicks_Create_new_account_button(String fullName, String DOB, String password) throws Throwable {
+		register.typeFullName (fullName);
+		register.typeDOB (DOB);
+		register.typePassword (password);
+		register.tickCheckBox();
+		addressPage = register.clickCreateNewAccountButton();	
+	    
+	}
+
+	@When("^enters the postcode \"([^\"]*)\", and selects the correct address$")
+	public void enters_the_postcode_and_selects_the_correct_address(String postcode) throws Throwable {
+		addressPage.typePostCode(postcode);
+		addressPage.selectAddress();
+	   
+	}
+
 //	@Then("^Customer will be redirected to page$")
 //	public void customer_will_be_redirected_to_page() throws Throwable {
 //	    
