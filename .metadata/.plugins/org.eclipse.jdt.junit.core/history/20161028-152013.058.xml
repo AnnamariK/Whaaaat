@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ClearScore (1)" project="ClearScore" tests="5" started="5" failures="0" errors="2" ignored="1">
+  <testsuite name="testPackage.RunCukes" time="14.99">
+    <testsuite name="Feature: Registering on ClearScore.com" time="14.99">
+      <testsuite name="Scenario: Entering email address" time="14.97" incomplete="true">
+        <error>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain "Your address details". Current title: "Create your account" (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: 'unknown', revision: '31c43c8', time: '2016-08-02 21:57:56 -0700'
+System info: host: 'ANNAMARIA', ip: '10.3.11.211', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, appBuildId=20161019084923, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=15804, browserVersion=49.0.2, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt, device=desktop}]
+Session ID: 4290d7ef-a4a5-4021-9a0c-f30ff36637d8&#13;
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)&#13;
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)&#13;
+	at pagePackage.AddressPage.&lt;init&gt;(AddressPage.java:22)&#13;
+	at pagePackage.RegisterPage.clickCreateNewAccountButton(RegisterPage.java:53)&#13;
+	at testPackage.ClearScore.enters_full_name_and_enters_DOB_and_enters_pasword_and_ticks_Yes_I_agree_checkbox_and_clicks_Create_new_account_button(ClearScore.java:57)&#13;
+	at ✽.And enters full name "Kovacs Pityu", and enters DOB "10/11/1975", and enters pasword "Kismajom33", and ticks Yes, I agree checkbox, and clicks Create new account button(testScenario.feature:7)&#13;
+&#13;
+</error>
+        <testcase name="Given ClearScore page open" classname="Scenario: Entering email address" time="1.071"/>
+        <testcase name="When Customer clicks on the Sign Up button" classname="Scenario: Entering email address" time="0.169"/>
+        <testcase name="And enters a valid email address &quot;anna.mari3@windowslive.com&quot; and clicks on Continue button" classname="Scenario: Entering email address" time="13.724"/>
+        <testcase name="And enters full name &quot;Kovacs Pityu&quot;, and enters DOB &quot;10/11/1975&quot;, and enters pasword &quot;Kismajom33&quot;, and ticks Yes, I agree checkbox, and clicks Create new account button" classname="Scenario: Entering email address" time="0.005">
+          <error>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to contain "Your address details". Current title: "Create your account" (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: 'unknown', revision: '31c43c8', time: '2016-08-02 21:57:56 -0700'
+System info: host: 'ANNAMARIA', ip: '10.3.11.211', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, appBuildId=20161019084923, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=15804, browserVersion=49.0.2, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt, device=desktop}]
+Session ID: 4290d7ef-a4a5-4021-9a0c-f30ff36637d8&#13;
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)&#13;
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)&#13;
+	at pagePackage.AddressPage.&lt;init&gt;(AddressPage.java:22)&#13;
+	at pagePackage.RegisterPage.clickCreateNewAccountButton(RegisterPage.java:53)&#13;
+	at testPackage.ClearScore.enters_full_name_and_enters_DOB_and_enters_pasword_and_ticks_Yes_I_agree_checkbox_and_clicks_Create_new_account_button(ClearScore.java:57)&#13;
+	at ✽.And enters full name "Kovacs Pityu", and enters DOB "10/11/1975", and enters pasword "Kismajom33", and ticks Yes, I agree checkbox, and clicks Create new account button(testScenario.feature:7)&#13;
+&#13;
+</error>
+        </testcase>
+        <testcase name="And enters the postcode &quot;se13 5hj&quot;, and selects the correct address" classname="Scenario: Entering email address" time="0.017" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

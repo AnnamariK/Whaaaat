@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ClearScore (1)" project="ClearScore" tests="5" started="5" failures="2" errors="0" ignored="1">
+  <testsuite name="testPackage.RunCukes" time="8.373">
+    <testsuite name="Feature: Registering on ClearScore.com" time="8.373">
+      <testsuite name="Scenario: Entering email address" time="8.365" incomplete="true">
+        <failure>java.lang.AssertionError: expected:&lt;FirefoxDriver: firefox on XP (caa3f177-3e8c-4fa0-afb8-284352ec7942)&gt; but was:&lt;Your address details&gt;&#13;
+	at org.junit.Assert.fail(Assert.java:88)&#13;
+	at org.junit.Assert.failNotEquals(Assert.java:834)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:118)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at pagePackage.AddressPage.&lt;init&gt;(AddressPage.java:23)&#13;
+	at pagePackage.RegisterPage.clickCreateNewAccountButton(RegisterPage.java:53)&#13;
+	at testPackage.ClearScore.enters_full_name_and_enters_DOB_and_enters_pasword_and_ticks_Yes_I_agree_checkbox_and_clicks_Create_new_account_button(ClearScore.java:57)&#13;
+	at ✽.And enters full name "Kovacs Pityu", and enters DOB "10/11/1975", and enters pasword "Kismajom33", and ticks Yes, I agree checkbox, and clicks Create new account button(testScenario.feature:7)&#13;
+&#13;
+</failure>
+        <testcase name="Given ClearScore page open" classname="Scenario: Entering email address" time="1.106"/>
+        <testcase name="When Customer clicks on the Sign Up button" classname="Scenario: Entering email address" time="0.198"/>
+        <testcase name="And enters a valid email address &quot;anna.mari2@windowslive.com&quot; and clicks on Continue button" classname="Scenario: Entering email address" time="7.059"/>
+        <testcase name="And enters full name &quot;Kovacs Pityu&quot;, and enters DOB &quot;10/11/1975&quot;, and enters pasword &quot;Kismajom33&quot;, and ticks Yes, I agree checkbox, and clicks Create new account button" classname="Scenario: Entering email address" time="0.002">
+          <failure>java.lang.AssertionError: expected:&lt;FirefoxDriver: firefox on XP (caa3f177-3e8c-4fa0-afb8-284352ec7942)&gt; but was:&lt;Your address details&gt;&#13;
+	at org.junit.Assert.fail(Assert.java:88)&#13;
+	at org.junit.Assert.failNotEquals(Assert.java:834)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:118)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at pagePackage.AddressPage.&lt;init&gt;(AddressPage.java:23)&#13;
+	at pagePackage.RegisterPage.clickCreateNewAccountButton(RegisterPage.java:53)&#13;
+	at testPackage.ClearScore.enters_full_name_and_enters_DOB_and_enters_pasword_and_ticks_Yes_I_agree_checkbox_and_clicks_Create_new_account_button(ClearScore.java:57)&#13;
+	at ✽.And enters full name "Kovacs Pityu", and enters DOB "10/11/1975", and enters pasword "Kismajom33", and ticks Yes, I agree checkbox, and clicks Create new account button(testScenario.feature:7)&#13;
+&#13;
+</failure>
+        </testcase>
+        <testcase name="And enters the postcode &quot;se13 5hj&quot;, and selects the correct address" classname="Scenario: Entering email address" time="0.007" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

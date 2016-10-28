@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ClearScore (1)" project="ClearScore" tests="5" started="5" failures="0" errors="2" ignored="1">
+  <testsuite name="testPackage.RunCukes" time="11.618">
+    <testsuite name="Feature: Registering on ClearScore.com" time="11.618">
+      <testsuite name="Scenario: Entering email address" time="11.613" incomplete="true">
+        <skipped/>
+        <testcase name="Given ClearScore page open" classname="Scenario: Entering email address" time="1.139"/>
+        <testcase name="When Customer clicks on the Sign Up button" classname="Scenario: Entering email address" time="0.157"/>
+        <testcase name="And enters a valid email address &quot;anna.mari@windowslive.com&quot; and clicks on Continue button" classname="Scenario: Entering email address" time="10.309"/>
+        <testcase name="And enters full name &quot;Kovacs Pityu&quot;, and enters DOB &quot;10/11/1975&quot;, and enters pasword &quot;Kismajom33&quot;, and ticks Yes, I agree checkbox, and clicks Create new account button" classname="Scenario: Entering email address" time="0.007">
+          <error>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: Proxy element for: DefaultElementLocator 'By.id: full_name' (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: 'unknown', revision: '31c43c8', time: '2016-08-02 21:57:56 -0700'
+System info: host: 'ANNAMARIA', ip: '10.3.11.211', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, appBuildId=20161019084923, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=10520, browserVersion=49.0.2, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt, device=desktop}]
+Session ID: 13bc2908-050d-423e-a2d8-1ad6df14f6c9&#13;
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)&#13;
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)&#13;
+	at pagePackage.RegisterPage.typeFullName(RegisterPage.java:30)&#13;
+	at testPackage.ClearScore.enters_full_name_and_enters_DOB_and_enters_pasword_and_ticks_Yes_I_agree_checkbox_and_clicks_Create_new_account_button(ClearScore.java:53)&#13;
+	at ✽.And enters full name "Kovacs Pityu", and enters DOB "10/11/1975", and enters pasword "Kismajom33", and ticks Yes, I agree checkbox, and clicks Create new account button(testScenario.feature:7)&#13;
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: #full_name (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 13 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: '31c43c8', time: '2016-08-02 21:57:56 -0700'
+System info: host: 'ANNAMARIA', ip: '10.3.11.211', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_102'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, appBuildId=20161019084923, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=10520, browserVersion=49.0.2, platformVersion=10.0, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt, device=desktop}]
+Session ID: 13bc2908-050d-423e-a2d8-1ad6df14f6c9
+*** Element info: {Using=css selector, value=#full_name}&#13;
+	at sun.reflect.GeneratedConstructorAccessor8.newInstance(Unknown Source)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)&#13;
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:683)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:498)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:429)&#13;
+	at org.openqa.selenium.By$ById.findElement(By.java:218)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:369)&#13;
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;
+	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)&#13;
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)&#13;
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)&#13;
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)&#13;
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)&#13;
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:684)&#13;
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:677)&#13;
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)&#13;
+	at pagePackage.RegisterPage.typeFullName(RegisterPage.java:30)&#13;
+	at testPackage.ClearScore.enters_full_name_and_enters_DOB_and_enters_pasword_and_ticks_Yes_I_agree_checkbox_and_clicks_Create_new_account_button(ClearScore.java:53)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;
+	at java.lang.reflect.Method.invoke(Unknown Source)&#13;
+	at cucumber.runtime.Utils$1.call(Utils.java:37)&#13;
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)&#13;
+	at cucumber.runtime.Utils.invoke(Utils.java:31)&#13;
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)&#13;
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)&#13;
+	at cucumber.runtime.Runtime.runStep(Runtime.java:299)&#13;
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)&#13;
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)&#13;
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)&#13;
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)&#13;
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)&#13;
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)&#13;
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)&#13;
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)&#13;
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)&#13;
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)&#13;
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)&#13;
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)&#13;
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)&#13;
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)&#13;
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)&#13;
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</error>
+        </testcase>
+        <testcase name="And enters the postcode &quot;se13 5hj&quot;, and selects the correct address" classname="Scenario: Entering email address" time="0.0" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>
