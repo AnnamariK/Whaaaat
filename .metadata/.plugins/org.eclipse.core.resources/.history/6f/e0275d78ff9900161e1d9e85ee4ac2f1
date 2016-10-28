@@ -1,0 +1,19 @@
+package testPackage;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class JUniferVPNPage {
+	
+	WebDriver browser;
+	String title = "junifer.com Is For Sale";
+
+
+		public JUniferVPNPage(WebDriver browser) {
+			Assert.assertEquals(title, browser.getTitle());
+			this.browser = browser;
+			PageFactory.initElements(browser,this);
+	}
+
+}

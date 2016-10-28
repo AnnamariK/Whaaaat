@@ -1,2 +1,3 @@
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>delete</message>\r\n<message>ClearScore</message>\r\n<message>Explicit wait</message>\r\n<message>update</message>\r\n<message>no temp</message>\r\n<message>Council</message>\r\n<message>gecko update</message>\r\n<message>Update geckodriver</message>\r\n<message>Update</message>\r\n<message>Selenium3</message>\r\n</messages>
 eclipse.preferences.version=1
 show_initial_config_dialog=false

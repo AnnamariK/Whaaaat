@@ -1,0 +1,21 @@
+package pagePackage;
+
+public class paymentService {
+
+	WebDriver browser;
+	String title2 = "Online Payment";
+	 @FindBy (css = "img[class='aip_image aip_image_hierarchy']") private WebElement councilTax;
+
+
+	 public PaymentServicePage(WebDriver browser) {
+			Assert.assertEquals(title2, browser.getTitle());
+			this.browser = browser;
+			PageFactory.initElements(browser,this);
+	 }
+
+	public ReferenceDetailsPage clickCouncilTax() { 
+		councilTax.click();
+		return new ReferenceDetailsPage(browser);
+	}
+}
+}

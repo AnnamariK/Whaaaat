@@ -2,10 +2,12 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="ClearScore"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="ClearScore"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -44,6 +46,9 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\ClearScore"/>
+			<item value="C:\Users\Annamaria\git\Name-Test"/>
+			<item value="D:\Selenium"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -56,16 +61,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="Gabi.GabiCouncilTax"/>
-			<item value="FirstProject.FirstProject"/>
 		</list>
 		<list key="groupId">
-			<item value="Gabi"/>
-			<item value="FirstProject"/>
 		</list>
 		<list key="artifactId">
-			<item value="GabiCouncilTax"/>
-			<item value="FirstProject"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

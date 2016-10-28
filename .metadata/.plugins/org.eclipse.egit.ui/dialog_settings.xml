@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="2" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="bitbucket.org"/>
+		<item value="github.com"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/AnnamariK/Whaaaat"/>
+		<item value="https://github.com/AnnamariK/Name-Test.git"/>
+	</list>
+	<list key="CommitDialog.authorValues">
+		<item value="AnnamariK &lt;Annamaria@10.3.11.211&gt;"/>
+		<item value="Annamaria &lt;Annamaria@10.3.11.211&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="AnnamariK &lt;Annamaria@10.3.11.211&gt;"/>
+		<item value="Annamaria &lt;Annamaria@10.3.11.211&gt;"/>
+	</list>
 	<section name="GitImportWizard">
+		<item value="true" key="GitProjectsImportPage.STORE_NESTED_PROJECTS"/>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item value="666" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="458" key="DIALOG_HEIGHT"/>
+		<item value="635" key="DIALOG_X_ORIGIN"/>
+		<item value="283" key="DIALOG_Y_ORIGIN"/>
+		<list key="sashWeights">
+			<item value="600"/>
+			<item value="400"/>
+		</list>
 	</section>
 	<section name="GitCommitMessageComponent">
 		<list key="C:\Users\Annamaria\Dropbox\Screenshots\FirstProject\.git">
@@ -9,6 +39,9 @@
 			<item value="Latest changes"/>
 			<item value="Annamaria &lt;annamaria.keskeny@junifersystems.com&gt;"/>
 			<item value="0000000000000000000000000000000000000000"/>
+		</list>
+		<list key="C:\Users\Annamaria\Downloads\Name-Test-master\Name-Test-master\ArtTest\.git">
+			<item value="empty"/>
 		</list>
 		<list key="D:\Jnrhenergy\Eclipse\.git">
 			<item value="false"/>
@@ -19,6 +52,13 @@
 		</list>
 		<list key="C:\Users\Annamaria\workspace\.git">
 			<item value="empty"/>
+		</list>
+		<list key="D:\ClearScore\.git">
+			<item value="false"/>
+			<item value="AnnamariK &lt;Annamaria@10.3.11.211&gt;"/>
+			<item value="delete"/>
+			<item value="AnnamariK &lt;Annamaria@10.3.11.211&gt;"/>
+			<item value="0000000000000000000000000000000000000000"/>
 		</list>
 	</section>
 	<section name="GitCreatePatchWizard">
@@ -33,7 +73,7 @@
 	</section>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
 		<item value="765,235" key="STAGING_SASH_FORM_WEIGHT"/>
-		<item value="false" key="sortItemState"/>
+		<item value="true" key="sortItemState"/>
 		<item value="500,500" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
 	</section>
 	<section name="CommitSelectionDialogSection">

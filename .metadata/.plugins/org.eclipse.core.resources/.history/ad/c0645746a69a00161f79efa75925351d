@@ -1,0 +1,33 @@
+package pagePackage;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import pagePackage.JUniferVPNPage;
+
+public class JuniferMainPage {
+	
+	WebDriver browser;
+	String title="Junifer Systems - Smart CIS Solutions for Utilities";
+	
+	@FindBy (id = "menu-item-80") private WebElement VPNLink;
+	
+	public JuniferMainPage(WebDriver browser) {
+		Assert.assertEquals(title, browser.getTitle());
+		this.browser = browser;
+		PageFactory.initElements(browser,this);
+		
+	}
+
+	public JUniferVPNPage clickVPN() {
+		VPNLink.click();
+		return new JUniferVPNPage(browser);
+	}
+	
+		
+	
+
+}

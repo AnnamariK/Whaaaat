@@ -1,0 +1,10 @@
+package testPackage;
+
+public class MainNew {
+
+	@T
+	public MainNew() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

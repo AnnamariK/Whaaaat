@@ -1,0 +1,22 @@
+package pagePackage;
+
+public class cheshireeast {
+	WebDriver browser;
+	
+	String title = "Cheshire East Council - make an online payment - Main Menu";
+	 @FindBy (css = "a[title = 'Make an online payment']") private WebElement makeOnlinePayment;
+	 
+	 public CheshireeastPage(WebDriver browser) {
+			Assert.assertEquals(title, browser.getTitle());
+			this.browser = browser;
+			PageFactory.initElements(browser,this);
+	}
+
+	public PaymentServicePage clickMakeOnlinePayment() {
+		makeOnlinePayment.click();
+		return new PaymentServicePage(browser);
+	 }
+
+}
+
+}

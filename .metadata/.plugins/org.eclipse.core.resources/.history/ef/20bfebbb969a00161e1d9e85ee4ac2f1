@@ -1,0 +1,10 @@
+package pagePackage;
+
+public class paymentMade {
+	public PaymentMade(WebDriver browser) {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+}

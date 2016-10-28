@@ -1,0 +1,53 @@
+package testPackage;
+
+import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class payment {
+	
+	WebDriver browser;
+	String titleDetails = "Cheshire East Council - make an online payment";
+
+	@FindBy (id = "scp_cardPage_cardNumber_input") private WebElement cardNumberField;
+	@FindBy (id = "scp_cardPage_expiryDate_input") private WebElement expDateFieldMonth;
+	@FindBy (id = "scp_cardPage_expiryDate_input2") private WebElement expDateFieldYear;
+	@FindBy (id = "scp_cardPage_csc_input") private WebElement secCodeField;
+	@FindBy (id = "continue") private WebElement continueButton;
+
+	
+	public payment(WebDriver browser) {
+		Assert.assertEquals(titleDetails, browser.getTitle());
+		this.browser = browser;
+		PageFactory.initElements(browser, this);
+	}
+	
+	public void typeCardNumber(String cardNumber) {
+		cardNumberField.sendKeys(cardNumber);
+		
+	}
+
+	public void typeExpDateMonth(String expDateMonth) {
+		expDateFieldMonth.sendKeys(expDateMonth);
+		
+	}
+	
+	public void typeExpDateYear(String expDateYear) {
+		expDateFieldYear.sendKeys(expDateYear);
+		
+	}
+	
+	public void typeSecCode(String secCode) {
+		secCodeField.sendKeys(secCode);
+		
+	}
+	
+	public additionalInformation clickContinueButton() {
+		continueButton.click();
+		return new additionalInformation(browser);
+	}
+}
+
+

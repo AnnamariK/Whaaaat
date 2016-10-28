@@ -1,0 +1,22 @@
+package pagePackage;
+
+public class paymentConfirmation {
+	WebDriver browser;
+	String title = "Confirm Payment Details";
+	
+	@FindBy (css = "td[class = '']") private WebElement totalAmount;
+	@FindBy (css = "td[class = '']") private WebElement makeAPaymentButton;
+	
+	public PaymentConfirmationPage(WebDriver browser) {
+			Assert.assertEquals(title, browser.getTitle());
+			this.browser = browser;
+			PageFactory.initElements(browser, this);
+	}
+
+	public PaymentMade clickmakeAPaymentButton() {
+		makeAPaymentButton.click();
+		return new PaymentMade(browser);
+	}
+}
+
+}

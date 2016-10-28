@@ -1,0 +1,12 @@
+package testPacakge;
+
+import org.junit.Test;
+
+public class AtTest {
+
+	@Test
+	public static void atTest(){
+		System.out.println("Hello World");
+	}
+	
+}
