@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RunCukes (4)" project="ClearScore" tests="8" started="8" failures="2" errors="0" ignored="5">
+  <testsuite name="testPackage.RunCukes" time="1.279">
+    <testsuite name="Feature: Registering on ClearScore.com" time="1.279">
+      <testsuite name="Scenario: Entering email address" time="1.276" incomplete="true">
+        <skipped/>
+        <testcase name="Given ClearScore page open" classname="Scenario: Entering email address" time="1.071"/>
+        <testcase name="When Customer clicks on the Sign Up button" classname="Scenario: Entering email address" time="0.202"/>
+        <testcase name="And enters a valid email address &quot;anna.mari@windowslive.com&quot; and clicks on Continue button" classname="Scenario: Entering email address" time="0.003">
+          <failure>
+            <expected/>
+            <actual>Create your account</actual>org.junit.ComparisonFailure: expected:&lt;[]&gt; but was:&lt;[Create your account]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at pagePackage.RegisterPage.&lt;init&gt;(RegisterPage.java:21)&#13;
+	at pagePackage.SignUpPage.clickContinue(SignUpPage.java:36)&#13;
+	at testPackage.ClearScore.enters_a_valid_email_address_and_clicks_on_Continue_button(ClearScore.java:45)&#13;
+	at ✽.And enters a valid email address "anna.mari@windowslive.com" and clicks on Continue button(testScenario.feature:6)&#13;
+&#13;
+</failure>
+        </testcase>
+        <testcase name="And enters full name &quot;Kovacs Pityu&quot;" classname="Scenario: Entering email address" time="0.0" ignored="true"/>
+        <testcase name="And enters DOB &quot;10/11/1975&quot;" classname="Scenario: Entering email address" time="0.0" ignored="true"/>
+        <testcase name="And enters pasword &quot;Kismajom33&quot;" classname="Scenario: Entering email address" time="0.001" ignored="true"/>
+        <testcase name="And ticks Yes, I agree checkbox" classname="Scenario: Entering email address" time="0.0" ignored="true"/>
+        <testcase name="And clicks Create new account button" classname="Scenario: Entering email address" time="0.0" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

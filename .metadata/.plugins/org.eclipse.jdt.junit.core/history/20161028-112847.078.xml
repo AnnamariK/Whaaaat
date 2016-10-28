@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ClearScore (1)" project="ClearScore" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="testPackage.RunCukes" time="2.231">
+    <testsuite name="Feature: Registering on ClearScore.com" time="2.231">
+      <testsuite name="Scenario: Entering email address" time="2.231">
+        <testcase name="Given ClearScore page open" classname="Scenario: Entering email address" time="1.057"/>
+        <testcase name="When Customer clicks on the Sign Up button" classname="Scenario: Entering email address" time="0.18"/>
+        <testcase name="And enters a valid email address &quot;anna.mari@windowslive.com&quot; and clicks on Continue button" classname="Scenario: Entering email address" time="0.986"/>
+        <testcase name="And enters full name &quot;Kovacs Pityu&quot;, and enters DOB &quot;10/11/1975&quot;, and enters pasword &quot;Kismajom33&quot;, and ticks Yes, I agree checkbox, and clicks Create new account button" classname="Scenario: Entering email address" time="0.007"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

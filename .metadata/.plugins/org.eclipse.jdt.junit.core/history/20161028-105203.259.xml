@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ClearScore (1)" project="ClearScore" tests="3" started="3" failures="2" errors="0" ignored="0">
+  <testsuite name="testPackage.RunCukes" time="2.237">
+    <testsuite name="Feature: Registering on ClearScore.com" time="2.237">
+      <testsuite name="Scenario: Entering email address" time="2.237" incomplete="true">
+        <failure>
+          <expected/>
+          <actual>Create your account</actual>org.junit.ComparisonFailure: expected:&lt;[]&gt; but was:&lt;[Create your account]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at pagePackage.RegisterPage.&lt;init&gt;(RegisterPage.java:21)&#13;
+	at pagePackage.SignUpPage.clickContinue(SignUpPage.java:36)&#13;
+	at testPackage.ClearScore.enters_a_valid_email_address_and_clicks_on_Continue_button(ClearScore.java:45)&#13;
+	at ✽.And enters a valid email address "annamari.keskeny@gmail.com" and clicks on Continue button(testScenario.feature:6)&#13;
+&#13;
+</failure>
+        <testcase name="Given ClearScore page open" classname="Scenario: Entering email address" time="2.076"/>
+        <testcase name="When Customer clicks on the Sign Up button" classname="Scenario: Entering email address" time="0.157"/>
+        <testcase name="And enters a valid email address &quot;annamari.keskeny@gmail.com&quot; and clicks on Continue button" classname="Scenario: Entering email address" time="0.004">
+          <failure>
+            <expected/>
+            <actual>Create your account</actual>org.junit.ComparisonFailure: expected:&lt;[]&gt; but was:&lt;[Create your account]&gt;&#13;
+	at org.junit.Assert.assertEquals(Assert.java:115)&#13;
+	at org.junit.Assert.assertEquals(Assert.java:144)&#13;
+	at pagePackage.RegisterPage.&lt;init&gt;(RegisterPage.java:21)&#13;
+	at pagePackage.SignUpPage.clickContinue(SignUpPage.java:36)&#13;
+	at testPackage.ClearScore.enters_a_valid_email_address_and_clicks_on_Continue_button(ClearScore.java:45)&#13;
+	at ✽.And enters a valid email address "annamari.keskeny@gmail.com" and clicks on Continue button(testScenario.feature:6)&#13;
+&#13;
+</failure>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

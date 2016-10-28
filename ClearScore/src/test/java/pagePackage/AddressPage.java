@@ -20,13 +20,14 @@ public class AddressPage {
 	 
 	public AddressPage(WebDriver browser) {
 		 new WebDriverWait(browser, 10).until(ExpectedConditions.titleContains(title));
-		 Assert.assertEquals(browser, title);
+		 Assert.assertEquals(title, browser.getTitle());
 		 this.browser = browser;
 		 PageFactory.initElements(browser, this);
 	}
 		 
 	public void typePostCode(String postcode) {
-				postcodeField.sendKeys(postcode);
+		new WebDriverWait(browser, 10).until(ExpectedConditions.elementToBeClickable(postcodeField));
+		postcodeField.sendKeys(postcode);
 		
 		
 	}

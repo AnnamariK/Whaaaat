@@ -1,0 +1,11 @@
+package pagePackage;
+
+import org.openqa.selenium.WebDriver;
+
+public class AddressPage {
+
+	public AddressPage(WebDriver browser) {
+		// TODO Auto-generated constructor stub
+	}
+
+}
