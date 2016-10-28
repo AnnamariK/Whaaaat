@@ -1,0 +1,545 @@
+diff --git a/GabiCouncilTax/.classpath b/GabiCouncilTax/.classpath
+new file mode 100644
+index 0000000..58abb6d
+--- /dev/null
++++ b/GabiCouncilTax/.classpath
+@@ -0,0 +1,21 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<classpath>
++	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
++		<attributes>
++			<attribute name="optional" value="true"/>
++			<attribute name="maven.pomderived" value="true"/>
++		</attributes>
++	</classpathentry>
++	<classpathentry kind="src" path="src/test/resources"/>
++	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
++		<attributes>
++			<attribute name="maven.pomderived" value="true"/>
++		</attributes>
++	</classpathentry>
++	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
++		<attributes>
++			<attribute name="maven.pomderived" value="true"/>
++		</attributes>
++	</classpathentry>
++	<classpathentry kind="output" path="target/classes"/>
++</classpath>
+diff --git a/GabiCouncilTax/.gitignore b/GabiCouncilTax/.gitignore
+new file mode 100644
+index 0000000..b83d222
+--- /dev/null
++++ b/GabiCouncilTax/.gitignore
+@@ -0,0 +1 @@
++/target/
+diff --git a/GabiCouncilTax/.project b/GabiCouncilTax/.project
+new file mode 100644
+index 0000000..7e65f34
+--- /dev/null
++++ b/GabiCouncilTax/.project
+@@ -0,0 +1,23 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<projectDescription>
++	<name>GabiCouncilTax</name>
++	<comment></comment>
++	<projects>
++	</projects>
++	<buildSpec>
++		<buildCommand>
++			<name>org.eclipse.jdt.core.javabuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++		<buildCommand>
++			<name>org.eclipse.m2e.core.maven2Builder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++	</buildSpec>
++	<natures>
++		<nature>org.eclipse.jdt.core.javanature</nature>
++		<nature>org.eclipse.m2e.core.maven2Nature</nature>
++	</natures>
++</projectDescription>
+diff --git a/GabiCouncilTax/.settings/org.eclipse.core.resources.prefs b/GabiCouncilTax/.settings/org.eclipse.core.resources.prefs
+new file mode 100644
+index 0000000..ec45286
+--- /dev/null
++++ b/GabiCouncilTax/.settings/org.eclipse.core.resources.prefs
+@@ -0,0 +1,3 @@
++eclipse.preferences.version=1
++encoding//src/test/java=UTF-8
++encoding/<project>=UTF-8
+diff --git a/GabiCouncilTax/.settings/org.eclipse.jdt.core.prefs b/GabiCouncilTax/.settings/org.eclipse.jdt.core.prefs
+new file mode 100644
+index 0000000..8626026
+--- /dev/null
++++ b/GabiCouncilTax/.settings/org.eclipse.jdt.core.prefs
+@@ -0,0 +1,5 @@
++eclipse.preferences.version=1
++org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.5
++org.eclipse.jdt.core.compiler.compliance=1.5
++org.eclipse.jdt.core.compiler.problem.forbiddenReference=warning
++org.eclipse.jdt.core.compiler.source=1.5
+diff --git a/GabiCouncilTax/.settings/org.eclipse.m2e.core.prefs b/GabiCouncilTax/.settings/org.eclipse.m2e.core.prefs
+new file mode 100644
+index 0000000..14b697b
+--- /dev/null
++++ b/GabiCouncilTax/.settings/org.eclipse.m2e.core.prefs
+@@ -0,0 +1,4 @@
++activeProfiles=
++eclipse.preferences.version=1
++resolveWorkspaceProjects=true
++version=1
+diff --git a/GabiCouncilTax/pom.xml b/GabiCouncilTax/pom.xml
+new file mode 100644
+index 0000000..636d412
+--- /dev/null
++++ b/GabiCouncilTax/pom.xml
+@@ -0,0 +1,49 @@
++<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
++  <modelVersion>4.0.0</modelVersion>
++
++  <groupId>Gabi</groupId>
++  <artifactId>GabiCouncilTax</artifactId>
++  <version>0.0.1-SNAPSHOT</version>
++  <packaging>jar</packaging>
++
++  <name>GabiCouncilTax</name>
++  <url>http://maven.apache.org</url>
++
++  <properties>
++    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++  </properties>
++
++  <dependencies>
++    
++    	<dependency>
++	    <groupId>info.cukes</groupId>
++	    <artifactId>cucumber-java</artifactId>
++	    <version>1.2.4</version>
++	</dependency>
++	
++	<dependency>
++    	<groupId>org.seleniumhq.selenium</groupId>
++    	<artifactId>selenium-java</artifactId>
++    	<version>2.53.0</version>
++	</dependency>
++	
++
++	
++	<dependency>
++	    <groupId>junit</groupId>
++	    <artifactId>junit</artifactId>
++	    <version>4.12</version>
++	    <scope>test</scope>
++	</dependency>
++	
++
++	<dependency>
++	    <groupId>info.cukes</groupId>
++	    <artifactId>cucumber-junit</artifactId>
++	    <version>1.2.4</version>
++	    <scope>test</scope>
++	</dependency>
++	
++  </dependencies>
++</project>
+diff --git a/GabiCouncilTax/src/test/java/testPackage/AccountDetailsPage.java b/GabiCouncilTax/src/test/java/testPackage/AccountDetailsPage.java
+new file mode 100644
+index 0000000..0756443
+--- /dev/null
++++ b/GabiCouncilTax/src/test/java/testPackage/AccountDetailsPage.java
+@@ -0,0 +1,32 @@
++package testPackage;
++
++import org.junit.Assert;
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.WebElement;
++import org.openqa.selenium.support.FindBy;
++import org.openqa.selenium.support.PageFactory;
++
++
++public class AccountDetailsPage {
++	
++	WebDriver browser;
++	String titleDetails = "Cheshire East Council - make an online payment - Data Entry";
++
++	@FindBy (id = "ATI_15") private WebElement amountToPayField;
++	@FindBy (id = "continue") private WebElement continueButton;
++
++	public  AccountDetailsPage(WebDriver browser) {
++		Assert.assertEquals(titleDetails, browser.getTitle());
++		this.browser = browser;
++		PageFactory.initElements(browser, this);
++	}
++	
++	public void typeAmountToPay(String amountToPay) {
++		amountToPayField.sendKeys(amountToPay);
++	}
++	
++	public ItemsForPaymentPage clickContinueButton() {
++		continueButton.click();
++		return new ItemsForPaymentPage(browser);
++	}
++}
+diff --git a/GabiCouncilTax/src/test/java/testPackage/AdditionalInformationPage.java b/GabiCouncilTax/src/test/java/testPackage/AdditionalInformationPage.java
+new file mode 100644
+index 0000000..0266397
+--- /dev/null
++++ b/GabiCouncilTax/src/test/java/testPackage/AdditionalInformationPage.java
+@@ -0,0 +1,7 @@
++package testPackage;
++
++public class AdditionalInformationPage {
++	
++	
++	
++}
+\ No newline at end of file
+diff --git a/GabiCouncilTax/src/test/java/testPackage/CheshireeastPage.java b/GabiCouncilTax/src/test/java/testPackage/CheshireeastPage.java
+new file mode 100644
+index 0000000..6b5750b
+--- /dev/null
++++ b/GabiCouncilTax/src/test/java/testPackage/CheshireeastPage.java
+@@ -0,0 +1,5 @@
++package testPackage;
++
++public class CheshireeastPage {
++
++}
+diff --git a/GabiCouncilTax/src/test/java/testPackage/CouncilTaxPaymentTest.java b/GabiCouncilTax/src/test/java/testPackage/CouncilTaxPaymentTest.java
+new file mode 100644
+index 0000000..501e76b
+--- /dev/null
++++ b/GabiCouncilTax/src/test/java/testPackage/CouncilTaxPaymentTest.java
+@@ -0,0 +1,165 @@
++package testPackage;
++
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.firefox.FirefoxDriver;
++
++import cucumber.api.java.After;
++import cucumber.api.java.Before;
++import cucumber.api.java.en.Given;
++import cucumber.api.java.en.Then;
++import cucumber.api.java.en.When;
++
++public class CouncilTaxPaymentTest {
++	
++	WebDriver browser;
++	String URL = "http://www.cheshireeast.gov.uk/online_payments.aspx";
++	
++	CheshireeastPage makeonlinepayment;
++	PaymentServicePage councilTax;
++	ReferenceDetailsPage reference;
++	AccountDetailsPage account;
++	ItemsForPaymentPage items;
++	PaymentPage payment;
++	AdditionalInformationPage info;
++	PaymentConfirmationPage confirm;
++	
++	@Before
++	public void openBrowser(){
++		browser = new FirefoxDriver();
++	}
++	
++	@Given("^Cheshireeast\\.gov page open$")
++	public void cheshireeast_gov_page_open() throws Throwable {
++		browser.get(URL);
++	   
++	}
++
++	@When("^Click on MakeAnOnlinePayment link$")
++	public void click_on_MakeAnOnlinePayment_link() throws Throwable {
++	   
++	}
++
++	@Then("^Will be redirected to Payment Service page$")
++	public void will_be_redirected_to_Payment_Service_page() throws Throwable {
++	    
++	}
++
++	@Given("^Payment Service page open$")
++	public void payment_Service_page_open() throws Throwable {
++	    
++	}
++
++	@When("^Click on Council Tax link$")
++	public void click_on_Council_Tax_link() throws Throwable {
++	   
++	}
++
++	@Then("^Will be redirected to Reference Details page$")
++	public void will_be_redirected_to_Reference_Details_page() throws Throwable {
++	    
++	}
++
++	@Given("^Reference Details Page Open$")
++	public void reference_Details_Page_Open() throws Throwable {
++	    
++	}
++
++	@When("^Enter my reference number \"([^\"]*)\" and click Continue$")
++	public void enter_my_reference_number_and_click_Continue(String arg1) throws Throwable {
++		reference = new ReferenceDetailsPage (browser);
++		reference.typeRefNumber(null);
++		reference.clickContinue();
++	    
++	}
++
++	@Then("^Will be redirected to Account Details page$")
++	public void will_be_redirected_to_Account_Details_page() throws Throwable {
++	    
++	}
++
++	@Given("^Account Details page open$")
++	public void account_Details_page_open() throws Throwable {
++	    
++	}
++
++	@When("^Enter the amount to be paid \"([^\"]*)\" and click Continue$")
++	public void enter_the_amount_to_be_paid_and_click_Continue(String arg1) throws Throwable {
++	    
++	}
++
++	@Then("^Will be redirected to Items for Payment page$")
++	public void will_be_redirected_to_Items_for_Payment_page() throws Throwable {
++	   
++	}
++
++	@Given("^Items for Payment page open$")
++	public void items_for_Payment_page_open() throws Throwable {
++	    
++	}
++
++	@When("^Verify the amount to be paid \"([^\"]*)\" and click Continue$")
++	public void verify_the_amount_to_be_paid_and_click_Continue(String arg1) throws Throwable {
++	    
++	}
++
++	@Then("^Will be redirected to Payment page$")
++	public void will_be_redirected_to_Payment_page() throws Throwable {
++	    
++	}
++
++	@Given("^Payment page is open$")
++	public void payment_page_is_open() throws Throwable {
++	    
++	}
++
++	@When("^Enter the Card Number \"([^\"]*)\"$")
++	public void enter_the_Card_Number(String arg1) throws Throwable {
++	   
++	}
++
++	@When("^Enter the Expiry Date \"([^\"]*)\"$")
++	public void enter_the_Expiry_Date(String arg1) throws Throwable {
++	    
++	}
++
++	@When("^Enter the Security Code \"([^\"]*)\" and click Continue$")
++	public void enter_the_Security_Code_and_click_Continue(String arg1) throws Throwable {
++	    ;
++	}
++
++	@Then("^Will be redirected to Additional Information page$")
++	public void will_be_redirected_to_Additional_Information_page() throws Throwable {
++	
++	}
++
++	@Given("^Additional Information page open$")
++	public void additional_Information_page_open() throws Throwable {
++	   
++	}
++
++	@When("^Enter the Cardholder Name \"([^\"]*)\"$")
++	public void enter_the_Cardholder_Name(String arg1) throws Throwable {
++	  
++	}
++
++	@When("^Enter the email address \"([^\"]*)\"$")
++	public void enter_the_email_address(String arg1) throws Throwable {
++	   
++	}
++
++	@When("^Enter the confirmation of the email address \"([^\"]*)\" and click Continue$")
++	public void enter_the_confirmation_of_the_email_address_and_click_Continue(String arg1) throws Throwable {
++	    
++	}
++
++	@Then("^Will be redirected to Payment Confirmation page$")
++	public void will_be_redirected_to_Payment_Confirmation_page() throws Throwable {
++	    
++	}
++	
++	@After
++	public void closeBrowser(){
++	browser.quit();
++	}
++
++}
+diff --git a/GabiCouncilTax/src/test/java/testPackage/ItemsForPaymentPage.java b/GabiCouncilTax/src/test/java/testPackage/ItemsForPaymentPage.java
+new file mode 100644
+index 0000000..08b6c35
+--- /dev/null
++++ b/GabiCouncilTax/src/test/java/testPackage/ItemsForPaymentPage.java
+@@ -0,0 +1,13 @@
++package testPackage;
++
++import org.openqa.selenium.WebDriver;
++
++public class ItemsForPaymentPage {
++	
++	
++
++	public ItemsForPaymentPage(WebDriver browser) {
++		// TODO Auto-generated constructor stub
++	}
++
++}
+diff --git a/GabiCouncilTax/src/test/java/testPackage/PaymentConfirmationPage.java b/GabiCouncilTax/src/test/java/testPackage/PaymentConfirmationPage.java
+new file mode 100644
+index 0000000..ecc0a8e
+--- /dev/null
++++ b/GabiCouncilTax/src/test/java/testPackage/PaymentConfirmationPage.java
+@@ -0,0 +1,5 @@
++package testPackage;
++
++public class PaymentConfirmationPage {
++
++}
+diff --git a/GabiCouncilTax/src/test/java/testPackage/PaymentPage.java b/GabiCouncilTax/src/test/java/testPackage/PaymentPage.java
+new file mode 100644
+index 0000000..d6dc5f4
+--- /dev/null
++++ b/GabiCouncilTax/src/test/java/testPackage/PaymentPage.java
+@@ -0,0 +1,5 @@
++package testPackage;
++
++public class PaymentPage {
++
++}
+diff --git a/GabiCouncilTax/src/test/java/testPackage/PaymentServicePage.java b/GabiCouncilTax/src/test/java/testPackage/PaymentServicePage.java
+new file mode 100644
+index 0000000..c78d40f
+--- /dev/null
++++ b/GabiCouncilTax/src/test/java/testPackage/PaymentServicePage.java
+@@ -0,0 +1,5 @@
++package testPackage;
++
++public class PaymentServicePage {
++
++}
+diff --git a/GabiCouncilTax/src/test/java/testPackage/ReferenceDetailsPage.java b/GabiCouncilTax/src/test/java/testPackage/ReferenceDetailsPage.java
+new file mode 100644
+index 0000000..f1b2285
+--- /dev/null
++++ b/GabiCouncilTax/src/test/java/testPackage/ReferenceDetailsPage.java
+@@ -0,0 +1,38 @@
++package testPackage;
++
++import org.junit.Assert;
++import org.openqa.selenium.WebDriver;
++import org.openqa.selenium.WebElement;
++import org.openqa.selenium.support.FindBy;
++import org.openqa.selenium.support.PageFactory;
++
++
++public class ReferenceDetailsPage {
++	
++	WebDriver browser;
++	String title = "Cheshire East Council - make an online payment - Account Search";
++	
++	@FindBy (id = "FT_2186") private WebElement referenceField;
++	@FindBy (id = "continue") private WebElement continueButton;
++	
++	public ReferenceDetailsPage(WebDriver browser) {
++		Assert.assertEquals(title, browser.getTitle());
++		this.browser = browser;
++		PageFactory.initElements(browser, this);
++
++	}
++
++	public void typeRefNumber(String referenceNumber) {
++		referenceField.sendKeys(referenceNumber);
++		
++	}
++
++	public AccountDetailsPage clickContinue() {
++		continueButton.click();
++		return new AccountDetailsPage(browser);
++		
++	}
++
++
++
++}
+diff --git a/GabiCouncilTax/src/test/java/testPackage/RunCukes.java b/GabiCouncilTax/src/test/java/testPackage/RunCukes.java
+new file mode 100644
+index 0000000..5dd4dd1
+--- /dev/null
++++ b/GabiCouncilTax/src/test/java/testPackage/RunCukes.java
+@@ -0,0 +1,13 @@
++package testPackage;
++
++import org.junit.runner.RunWith;
++
++import cucumber.api.CucumberOptions;
++import cucumber.api.junit.Cucumber;
++
++@RunWith(Cucumber.class)
++@CucumberOptions(plugin = {"pretty", "html:target/cucumber"	},features="src/test/resources/")
++
++public class RunCukes {
++
++}
+diff --git a/GabiCouncilTax/src/test/resources/testScenario.feature b/GabiCouncilTax/src/test/resources/testScenario.feature
+new file mode 100644
+index 0000000..3462e3b
+--- /dev/null
++++ b/GabiCouncilTax/src/test/resources/testScenario.feature
+@@ -0,0 +1,41 @@
++Feature: Council tax Payment
++	
++	Scenario: Opening Payment Service page
++		Given Cheshireeast.gov page open
++		When  Click on MakeAnOnlinePayment link
++		Then  Will be redirected to Payment Service page
++		
++	Scenario: Opening Reference Details page
++		Given Payment Service page open
++		When  Click on Council Tax link
++		Then  Will be redirected to Reference Details page	
++	
++	Scenario: Entering Reference Number
++		Given Reference Details Page Open
++		When  Enter my reference number "67055382" and click Continue
++		Then  Will be redirected to Account Details page
++		
++	Scenario: Entering Amount To Be Paid
++		Given Account Details page open
++		When  Enter the amount to be paid "89.00" and click Continue
++		Then  Will be redirected to Items for Payment page
++		
++	Scenario: Verifying Total Amount To Pay
++		Given Items for Payment page open
++		When  Verify the amount to be paid "89.00" and click Continue
++		Then  Will be redirected to Payment page
++		
++	Scenario: Entering Payment Details
++		Given Payment page is open
++		When  Enter the Card Number "4658592116504021"
++		And   Enter the Expiry Date "07/19"
++		And   Enter the Security Code "364" and click Continue
++		Then  Will be redirected to Additional Information page
++		
++	Scenario: Entering Additional Information
++		Given Additional Information page open
++		When  Enter the Cardholder Name "G Keskeny"
++		And   Enter the email address "gabikeskeny@gmail.com"
++		And   Enter the confirmation of the email address "gabikeskeny@gmail.com" and click Continue
++		Then  Will be redirected to Payment Confirmation page
++		
+\ No newline at end of file
